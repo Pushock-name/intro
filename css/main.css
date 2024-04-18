@@ -1,0 +1,30 @@
+@import url(normalize.css);
+@import url(intro.css);
+.html,
+body {
+  background: #000000;
+  color: #fff;
+  font-family: YS Text;
+  font-size: 18px;
+  line-height: 140%;
+  /* 25.2px */
+}
+.html img,
+body img {
+  display: block;
+}
+.html .wrapper,
+body .wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+.html .container,
+body .container {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+.html a,
+body a {
+  color: #A9EAFF;
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */

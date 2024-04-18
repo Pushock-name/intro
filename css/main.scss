@@ -1,0 +1,57 @@
+@import url(normalize.css);
+@import url(intro.css);
+
+.html,
+body {
+  background: #000000;
+  color: #fff;
+  font-family: YS Text;
+  font-size: 18px;
+  line-height: 140%;
+  /* 25.2px */
+
+  img {
+    display: block;
+  }
+
+  .wrapper {
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0px auto;
+  }
+
+  a {
+    color: #A9EAFF;
+    text-decoration: underline;
+  }
+
+  // .btn {
+  //   color: #000;
+  //   font-size: 20px;
+  //   background: #FFC700;
+  //   padding: 16px 30px;
+  //   border-radius: 10px;
+  //   display: block;
+  //   transition: all 0.5s ease-in-out;
+  //   text-align: center;
+  //   width: 255px;
+
+  //   @media (max-width: 768px) {
+  //     width: 241px;
+  //   }
+
+  //   &:hover {
+  //     scale: 1.05;
+  //     background: #FFE793;
+  //     color: #191E28;
+  //   }
+
+  //   &:active {
+  //     scale: 1.1;
+  //   }
+  // }
+}
