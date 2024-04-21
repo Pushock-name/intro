@@ -1,10 +1,10 @@
 .intro {
-  height: 900vh;
+  height: 875vh;
   position: relative;
 }
 .intro::after {
   content: "";
-  background-image: url("/img/decorate.png");
+  background-image: url("https://storage.yandexcloud.net/cnd.yandex.hr/cosmos/decorate.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -90,15 +90,60 @@
   flex-direction: column;
   gap: 32px;
 }
-.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .intro__goose__text__container {
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .intro__goose__text__container .swiper-wrapper {
+  max-width: 560px;
+}
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .intro__goose__text__container .swiper-slide {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .intro__goose__text__container .swiper-slide .intro__goose__text {
   max-width: 330px;
 }
-.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .intro__goose__text__container div:last-child {
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .intro__goose__text__container .swiper-slide .intro__goose__text div:last-child {
   margin-top: 12px;
 }
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-button-next,
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-rtl .swiper-button-prev {
+  background-image: none !important;
+  right: 16px;
+  left: auto;
+  top: 40%;
+  color: #FFF;
+  width: 20px;
+}
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-button-next::after,
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-rtl .swiper-button-prev::after {
+  content: url(https://storage.yandexcloud.net/cnd.yandex.hr/cosmos/arrowright.svg);
+}
+@media (max-width: 576px) {
+  .intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-button-next,
+  .intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-rtl .swiper-button-prev {
+    display: none;
+  }
+}
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-button-prev,
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-rtl .swiper-button-next {
+  background-image: none !important;
+  left: 16px;
+  right: auto;
+  top: 40%;
+  color: #FFF;
+}
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-button-prev::after,
+.intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-rtl .swiper-button-next::after {
+  content: url(https://storage.yandexcloud.net/cnd.yandex.hr/cosmos/arrowleft.svg);
+}
+@media (max-width: 576px) {
+  .intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-button-prev,
+  .intro .intro__content .intro__goose__content .intro__goose__main__container .intro__goose__container .swiper-rtl .swiper-button-next {
+    display: none;
+  }
+}
 .intro .intro__content .home {
-  margin-top: 300px;
-  height: 100vh;
+  height: 160vh;
 }
 .intro .intro__content .home .home__container {
   max-width: 1302px;
@@ -110,6 +155,41 @@
   justify-content: space-between;
 }
 .intro .intro__content .home .home__container .home__content .home__content__top .home__goose {
+  position: relative;
+  cursor: pointer;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__goose .home__goose__overlay {
+  display: none;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__goose .home__goose__overlay--active {
+  display: block;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__goose .home__goose__popup {
+  background: #0E151D;
+  position: absolute;
+  z-index: 200;
+  top: -140px;
+  left: 0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  gap: 24px;
+  width: 335px;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__goose .home__goose__popup .home__goose__popup__content {
+  position: relative;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__goose .home__goose__popup .home__goose__popup__content a {
+  color: inherit;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__goose .home__goose__popup .home__goose__popup__close-button {
+  border: none;
+  background: transparent;
+  color: #fff;
   cursor: pointer;
 }
 .intro .intro__content .home .home__container .home__content .home__content__top .home__titles .home__title {
@@ -128,34 +208,144 @@
   font-weight: 700;
   margin-top: 32px;
 }
+.intro .intro__content .home .home__container .home__content .home__content__top .home__rover {
+  position: relative;
+}
 .intro .intro__content .home .home__container .home__content .home__content__top .home__rover svg {
+  cursor: pointer;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__rover .home__rover__overlay {
+  display: none;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__rover .home__rover__overlay--active {
+  display: block;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__rover .home__rover__popup {
+  background: #0E151D;
+  position: absolute;
+  z-index: 200;
+  top: 140px;
+  right: 0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  gap: 24px;
+  width: 335px;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__rover .home__rover__popup .home__rover__popup__content {
+  position: relative;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__rover .home__rover__popup .home__rover__popup__content a {
+  color: inherit;
+}
+.intro .intro__content .home .home__container .home__content .home__content__top .home__rover .home__rover__popup .home__rover__popup__close-button {
+  border: none;
+  background: transparent;
+  color: #fff;
   cursor: pointer;
 }
 .intro .intro__content .home .home__container .home__content .home__content__bottom {
   margin-top: 64px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
   flex-wrap: wrap;
 }
 .intro .intro__content .home .home__container .home__content .home__content__bottom .home__card {
   border-radius: 12px;
   background: #1F1731;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable {
+  cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 16px;
   justify-content: space-between;
-  cursor: pointer;
   height: 72px;
+  padding: 16px;
 }
-.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__left {
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable .home__card__left {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__left svg {
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable .home__card__left svg {
   border-radius: 50%;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable .home__card__left .home__card__title {
+  font-weight: 500;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable .home__card__arrow {
+  transition: 0.35s;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable .home__card__arrow--is-active {
+  rotate: 180deg;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable-2 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 16px;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable-2 .home__card__left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable-2 .home__card__left svg {
+  border-radius: 50%;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable-2 .home__card__arrow {
+  transition: 0.35s;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__clickable-2 .home__card__arrow--is-active {
+  rotate: 180deg;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__opener {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.35s;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__opener .home__card__opener__content {
+  padding: 0 16px 16px 16px;
+  color: #FFF;
+  font-family: "YS Display";
+  font-size: 16px;
+  line-height: 120%;
+  /* 19.2px */
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__opener .home__card__opener__content .home__card__ul__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__opener .home__card__opener__content .home__card__ul__container .home__card__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__opener .home__card__opener__content .home__card__ul__container .home__card__ul .home__card__ul__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__opener--is-active {
+  height: 392px;
+  opacity: 1;
+}
+.intro .intro__content .home .home__container .home__content .home__content__bottom .home__card .home__card__opener--is-active-2 {
+  height: 250px;
+  opacity: 1;
 }
 .intro .intro__content .home .home__container .home__content .home__content__bottom .w32 {
   width: 307px;
@@ -167,8 +357,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 140px;
-  cursor: pointer;
+  margin-top: 54px;
 }
 .intro .intro__content .home .home__container .home__content .home__wow__link div {
   color: rgba(255, 255, 255, 0.48);
@@ -194,7 +383,44 @@
   align-items: center;
   gap: 25%;
 }
+.intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose {
+  position: relative;
+}
 .intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose svg {
+  cursor: pointer;
+}
+.intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose .wow__goose__overlay {
+  display: none;
+}
+.intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose .wow__goose__overlay--active {
+  display: block;
+}
+.intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose .wow__goose__popup {
+  background: #0E151D;
+  position: absolute;
+  z-index: 200;
+  top: -140px;
+  left: 0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  gap: 24px;
+  width: 335px;
+}
+.intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose .wow__goose__popup .wow__goose__popup__content {
+  position: relative;
+}
+.intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose .wow__goose__popup .wow__goose__popup__content a {
+  color: inherit;
+}
+.intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__goose .wow__goose__popup .wow__goose__popup__close-button {
+  border: none;
+  background: transparent;
+  color: #fff;
   cursor: pointer;
 }
 .intro .intro__content .wow .wow__container .wow__content .wow__content__top .wow__title {
@@ -229,7 +455,8 @@
   color: #FFF;
   font-variant-numeric: lining-nums proportional-nums;
   font-size: 12px;
-  line-height: 140%; /* 16.8px */
+  line-height: 140%;
+  /* 16.8px */
   /* 16.8px */
 }
 .intro .intro__content .wow .wow__container .wow__content .wow__content__bottom .wow__card__row1 {
@@ -243,4 +470,29 @@
 }
 .intro .intro__content .wow .wow__container .wow__content .wow__content__bottom .wow__card__row4 {
   height: 109px;
+}
+.intro .intro__content .header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+}
+.intro .intro__content .header .header__nav__links {
+  display: flex;
+  gap: 24px;
+  /* 25.2px */
+}
+.intro .intro__content .header .header__nav__links .header__nav__link {
+  color: #FFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 18px;
+  line-height: 140%;
+}
+.intro .intro__content .header .header__nav__links .header__nav__link a {
+  text-decoration: none;
+  color: inherit;
+}
+.intro .intro__content .header .header__nav__links .header__nav__link--active {
+  opacity: 0.4;
 }/*# sourceMappingURL=intro.css.map */
