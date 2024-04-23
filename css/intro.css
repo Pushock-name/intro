@@ -1,31 +1,5 @@
 .intro {
-  height: 880vh;
   position: relative;
-}
-@media (max-width: 1600px) {
-  .intro {
-    height: 865vh;
-  }
-}
-@media (max-width: 1300px) {
-  .intro {
-    height: 960vh;
-  }
-}
-@media (max-width: 1000px) {
-  .intro {
-    height: 1025vh;
-  }
-}
-@media (max-width: 650px) {
-  .intro {
-    height: 1180vh;
-  }
-}
-@media (max-width: 420px) {
-  .intro {
-    height: 1215vh;
-  }
 }
 .intro::after {
   content: "";
@@ -72,10 +46,8 @@
 }
 .intro .intro__content {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: auto;
+  position: relative;
   z-index: 2;
 }
 .intro .intro__content .intro__scroll__btn {
@@ -260,32 +232,7 @@
   }
 }
 .intro .intro__content .home {
-  height: 160vh;
-}
-@media (max-width: 1300px) {
-  .intro .intro__content .home {
-    height: 240vh;
-  }
-}
-@media (max-width: 1000px) {
-  .intro .intro__content .home {
-    height: 280vh;
-  }
-}
-@media (max-width: 650px) {
-  .intro .intro__content .home {
-    height: 360vh;
-  }
-}
-@media (max-width: 500px) {
-  .intro .intro__content .home {
-    height: 380vh;
-  }
-}
-@media (max-width: 420px) {
-  .intro .intro__content .home {
-    height: 412vh;
-  }
+  margin-top: 60%;
 }
 .intro .intro__content .home .home__container {
   max-width: 1304px;
@@ -620,6 +567,10 @@
 .intro .intro__content .home .home__container .home__content .home__wow__link svg {
   width: 14px;
   height: 24px;
+}
+.intro .intro__content .wow {
+  margin-top: 60%;
+  margin-bottom: 20%;
 }
 .intro .intro__content .wow .wow__container {
   margin: 0 auto;

@@ -1,32 +1,6 @@
 .intro {
-  height: 880vh;
   position: relative;
 
-  @media (max-width: 1600px) {
-    height: 865vh;
-  }
-
-  @media (max-width: 1300px) {
-    // height: 900vh;
-    // height: 910vh;
-    height: 960vh;
-  }
-
-  @media (max-width: 1000px) {
-    // height: 960vh;
-    // height: 980vh;
-    height: 1025vh;
-  }
-
-  @media (max-width: 650px) {
-    // height: 1165vh;
-        height: 1180vh;
-  }
-
-  @media (max-width: 420px) {
-    // height: 1165vh;
-        height: 1215vh;
-  }
 
   &::after {
     content: '';
@@ -73,10 +47,8 @@
 
   .intro__content {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: auto;
+    position: relative;
     z-index: 2;
 
     .intro__scroll__btn {
@@ -167,7 +139,6 @@
 
     .intro__goose__content {
       height: 200vh;
-      // height: 100vh;
       // margin: 500px 0;
 
       .intro__goose__main__container {
@@ -265,28 +236,7 @@
     }
 
     .home {
-      // margin-top: 300px;
-      height: 160vh;
-
-        @media (max-width: 1300px) {
-          height: 240vh;
-        }
-
-        @media (max-width: 1000px) {
-          height: 280vh;
-        }
-
-        @media (max-width: 650px) {
-          height: 360vh;
-        }
-
-        @media (max-width: 500px) {
-          height: 380vh;
-        }
-
-        @media (max-width: 420px) {
-          height: 412vh;
-        }
+      margin-top: 60%;
 
       .home__container {
         max-width: 1304px;
@@ -678,8 +628,8 @@
     }
 
     .wow {
-      // height: 100vh;
-      // margin-top: 40%;
+      margin-top: 60%;
+      margin-bottom: 20%;
 
       .wow__container {
         margin: 0 auto;
