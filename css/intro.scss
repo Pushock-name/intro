@@ -1,24 +1,31 @@
 .intro {
-  height: 875vh;
+  height: 880vh;
   position: relative;
 
-  // @media (max-width: 1900px) {
-  //   height: 860vh;
-  // }
+  @media (max-width: 1600px) {
+    height: 865vh;
+  }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1300px) {
     // height: 900vh;
-    height: 910vh;
+    // height: 910vh;
+    height: 960vh;
   }
 
   @media (max-width: 1000px) {
     // height: 960vh;
-    height: 980vh;
+    // height: 980vh;
+    height: 1025vh;
   }
 
   @media (max-width: 650px) {
     // height: 1165vh;
-        height: 1190vh;
+        height: 1180vh;
+  }
+
+  @media (max-width: 420px) {
+    // height: 1165vh;
+        height: 1215vh;
   }
 
   &::after {
@@ -35,7 +42,7 @@
     z-index: 2;
     pointer-events: none;
 
-    @media (max-width: 1400px) {
+    @media (max-width: 1300px) {
       width: 700px;
       height: 400px;
     }
@@ -86,6 +93,10 @@
       gap: 25px;
       pointer-events: none;
 
+      @media (max-width: 650px) {
+        gap: 0px;
+      }
+
       .intro__scroll__btn__text {
         color: rgba(255, 255, 255, 0.32);
         text-align: center;
@@ -95,11 +106,24 @@
         font-weight: 500;
         line-height: 140%;
         /* 39.2px */
+
+        @media (max-width: 650px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 460px) {
+          font-size: 15px;
+        }
       }
 
       .intro__scroll__btn__arrow {
-        width: 28px;
-        height: 48px;
+        svg {
+
+          @media (max-width: 650px) {
+            width: 28px;
+            height: 48px;
+          }
+        }
       }
     }
 
@@ -114,7 +138,7 @@
       flex-direction: column;
       justify-content: space-between;
 
-      @media (max-width: 1400px) {
+      @media (max-width: 1300px) {
         margin-top: 45%;
       }
     
@@ -124,6 +148,20 @@
     
       @media (max-width: 650px) {
         margin-top: 100%;
+      }
+
+      img {
+        @media (max-width: 1000px) {
+          max-width: 650px
+        }
+      
+        @media (max-width: 650px) {
+          max-width: 460px
+        }
+
+        @media (max-width: 460px) {
+          max-width: 320px
+        }
       }
     }
 
@@ -148,9 +186,16 @@
 
 
           .intro__goose__text__container {
+            @media (max-width: 460px) {
+              font-size: 16px;
+            }
 
             .swiper-wrapper {
               max-width: 560px;
+
+              @media (max-width: 460px) {
+                max-width: 500px;
+              }
             }
 
             .swiper-slide {
@@ -161,6 +206,10 @@
 
               .intro__goose__text {
                 max-width: 330px;
+        
+                @media (max-width: 460px) {
+                  max-width: 280px;
+                }
 
                 div:last-child {
                   margin-top: 12px;
@@ -183,6 +232,10 @@
             }
 
             @media (max-width: 576px) {
+              right: 56px;
+            }
+
+            @media (max-width: 460px) {
               display: none;
             }
           }
@@ -200,6 +253,10 @@
             }
 
             @media (max-width: 576px) {
+              left: 56px;
+            }
+
+            @media (max-width: 460px) {
               display: none;
             }
           }
@@ -211,23 +268,31 @@
       // margin-top: 300px;
       height: 160vh;
 
-        @media (max-width: 1400px) {
-          height: 200vh;
+        @media (max-width: 1300px) {
+          height: 240vh;
         }
 
         @media (max-width: 1000px) {
-          height: 250vh;
+          height: 280vh;
         }
 
         @media (max-width: 650px) {
-          height: 395vh;
+          height: 360vh;
+        }
+
+        @media (max-width: 500px) {
+          height: 380vh;
+        }
+
+        @media (max-width: 420px) {
+          height: 412vh;
         }
 
       .home__container {
-        max-width: 1302px;
+        max-width: 1304px;
         margin: 0px auto;
 
-        @media (max-width: 1400px) {
+        @media (max-width: 1300px) {
           max-width: 1000px;
         }
 
@@ -248,7 +313,19 @@
 
             .home__goose {
               position: relative;
-              cursor: pointer;
+
+              svg {
+                cursor: pointer;
+
+                @media (max-width: 650px) {
+                  max-width: 60px;
+                }
+  
+                @media (max-width: 420px) {
+                  max-width: 50px;
+                }
+              }
+
               //попапы
 
               .home__goose__overlay {
@@ -281,6 +358,10 @@
                 gap: 24px;
                 width: 335px;
 
+                @media (max-width: 420px) {
+                  width: 300px;
+                }
+
                 .home__goose__popup__content {
                   position: relative;
 
@@ -308,6 +389,14 @@
                 font-weight: 800;
                 line-height: 140%;
                 /* 50.4px */
+
+                @media (max-width: 650px) {
+                  font-size: 24px;
+                }
+
+                @media (max-width: 420px) {
+                  font-size: 20px;
+                }
               }
 
               .home__subtitle {
@@ -316,6 +405,15 @@
                 font-size: 18px;
                 font-weight: 700;
                 margin-top: 32px;
+
+                @media (max-width: 650px) {
+                  font-size: 16px;
+                }
+
+                @media (max-width: 420px) {
+                  font-size: 15px;
+                  margin-top: 20px;
+                }
               }
             }
 
@@ -324,6 +422,14 @@
 
               svg {
                 cursor: pointer;
+
+                @media (max-width: 650px) {
+                  max-width: 80px;
+                }
+
+                @media (max-width: 420px) {
+                  max-width: 60px;
+                }
               }
 
               .home__rover__overlay {
@@ -356,6 +462,10 @@
                 gap: 24px;
                 width: 335px;
 
+                @media (max-width: 420px) {
+                  width: 300px;
+                }
+
                 .home__rover__popup__content {
                   position: relative;
 
@@ -381,6 +491,10 @@
             align-items: flex-start;
             gap: 24px;
             flex-wrap: wrap;
+
+            @media (max-width: 420px) {
+              margin-top: 32px;
+            }
 
             .home__card {
               border-radius: 12px;
@@ -448,7 +562,8 @@
               }
 
               .home__card__opener {
-                height: 0;
+                max-height: 0px;
+                min-height: 0px;
                 opacity: 0;
                 overflow: hidden;
                 transition: 0.35s;
@@ -467,12 +582,21 @@
                   .home__card__ul__container {
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
+
+                    @media (max-width: 650px) {
+                      flex-direction: column;
+                      gap: 14px;
+                    }
 
                     .home__card__ul {
                       display: flex;
                       flex-direction: column;
                       gap: 14px;
+
+                      @media (max-width: 650px) {
+                        flex-direction: column;
+                        // flex-wrap: wrap;
+                      }
 
                       .home__card__ul__item {
                         display: flex;
@@ -485,13 +609,27 @@
                 }
 
                 &--is-active {
-                  height: 400px;
+                  // height: 400px;
+                  min-height: 400px;
+                  max-height: 400px;
                   opacity: 1;
+
+                  @media (max-width: 650px) {
+                    min-height: 0px;
+                    max-height: 600px;
+                  }
                 }
 
                 &--is-active-2 {
-                  height: 250px;
+                  // height: 250px;
+                  min-height: 250px;
+                  max-height: 250px;
                   opacity: 1;
+
+                  @media (max-width: 650px) {
+                    min-height: 0px;
+                    max-height: 600px;
+                  }
                 }
               }
 
@@ -499,10 +637,18 @@
 
             .w32 {
               width: 307px;
+
+              @media (max-width: 650px) {
+                width: 100%;
+              }
             }
 
             .w49 {
               width: 639px;
+
+              @media (max-width: 650px) {
+                width: 100%;
+              }
             }
           }
 
@@ -532,14 +678,14 @@
     }
 
     .wow {
-      height: 100vh;
+      // height: 100vh;
       // margin-top: 40%;
 
       .wow__container {
         margin: 0 auto;
-        max-width: 1302px;
+        max-width: 1304px;
 
-        @media (max-width: 1400px) {
+        @media (max-width: 1300px) {
           max-width: 1000px;
         }
 
@@ -557,13 +703,38 @@
           .wow__content__top {
             display: flex;
             align-items: center;
-            gap: 25%;
+            gap: 22%;
+
+            @media (max-width: 1300px) {
+              gap: 18%;
+            }
+
+            @media (max-width: 1000px) {
+              gap: 30px;
+            }
+
+            @media (max-width: 650px) {
+              gap: 32px;
+            }
+
+            @media (max-width: 420px) {
+              gap: 16px;
+            }
 
             .wow__goose {
               position: relative;
 
               svg {
                 cursor: pointer;
+
+                @media (max-width: 650px) {
+                  max-width: 60px;
+                }
+
+                @media (max-width: 420px) {
+                  max-width: 50px;
+                }
+
               }
 
               .wow__goose__overlay {
@@ -575,6 +746,7 @@
                 // top: 0;
                 // bottom: 0;
                 // opacity: 0.5;
+                // background-color: #000;
 
                 &--active {
                   display: block;
@@ -595,6 +767,11 @@
                 display: flex;
                 gap: 24px;
                 width: 335px;
+
+
+                @media (max-width: 420px) {
+                  width: 300px;
+                }
 
                 .wow__goose__popup__content {
                   position: relative;
@@ -623,6 +800,14 @@
               font-weight: 800;
               line-height: 140%;
               /* 50.4px */
+
+              @media (max-width: 650px) {
+                font-size: 24px;
+              }
+
+              @media (max-width: 420px) {
+                font-size: 20px;  
+              }
             }
           }
 
